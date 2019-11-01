@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'dotcms-elements',
+  namespace: 'dotcms-ema-elements',
   outputTargets: [
     {
       type: 'dist',

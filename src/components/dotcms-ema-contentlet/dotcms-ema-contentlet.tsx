@@ -1,10 +1,10 @@
 import { Component, h, Prop, Host } from '@stencil/core';
 
 @Component({
-  tag: 'dotcms-contentlet',
+  tag: 'dotcms-ema-contentlet',
   shadow: true
 })
-export class DotcmsContentlet {
+export class DotcmsEmaContentlet {
   @Prop() contentlet = {
     inode: '',
     identifier: '',

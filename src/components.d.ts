@@ -16,6 +16,12 @@ export namespace Components {
   interface DotcmsContentlet {
     'contentlet': { inode: string; identifier: string; contentType: string; baseType: string; dotLang: string; title: string; dotCanEdit: string; dotContentTypeId: string; };
   }
+  interface DotcmsEmaContainer {
+    'container': { acceptTypes: string; inode: string; identifier: string; uuid: string; maxContentlets: string; };
+  }
+  interface DotcmsEmaContentlet {
+    'contentlet': { inode: string; identifier: string; contentType: string; baseType: string; dotLang: string; title: string; dotCanEdit: string; dotContentTypeId: string; };
+  }
 }
 
 declare global {
@@ -32,9 +38,23 @@ declare global {
     prototype: HTMLDotcmsContentletElement;
     new (): HTMLDotcmsContentletElement;
   };
+
+  interface HTMLDotcmsEmaContainerElement extends Components.DotcmsEmaContainer, HTMLStencilElement {}
+  const HTMLDotcmsEmaContainerElement: {
+    prototype: HTMLDotcmsEmaContainerElement;
+    new (): HTMLDotcmsEmaContainerElement;
+  };
+
+  interface HTMLDotcmsEmaContentletElement extends Components.DotcmsEmaContentlet, HTMLStencilElement {}
+  const HTMLDotcmsEmaContentletElement: {
+    prototype: HTMLDotcmsEmaContentletElement;
+    new (): HTMLDotcmsEmaContentletElement;
+  };
   interface HTMLElementTagNameMap {
     'dotcms-container': HTMLDotcmsContainerElement;
     'dotcms-contentlet': HTMLDotcmsContentletElement;
+    'dotcms-ema-container': HTMLDotcmsEmaContainerElement;
+    'dotcms-ema-contentlet': HTMLDotcmsEmaContentletElement;
   }
 }
 
@@ -45,10 +65,18 @@ declare namespace LocalJSX {
   interface DotcmsContentlet {
     'contentlet'?: { inode: string; identifier: string; contentType: string; baseType: string; dotLang: string; title: string; dotCanEdit: string; dotContentTypeId: string; };
   }
+  interface DotcmsEmaContainer {
+    'container'?: { acceptTypes: string; inode: string; identifier: string; uuid: string; maxContentlets: string; };
+  }
+  interface DotcmsEmaContentlet {
+    'contentlet'?: { inode: string; identifier: string; contentType: string; baseType: string; dotLang: string; title: string; dotCanEdit: string; dotContentTypeId: string; };
+  }
 
   interface IntrinsicElements {
     'dotcms-container': DotcmsContainer;
     'dotcms-contentlet': DotcmsContentlet;
+    'dotcms-ema-container': DotcmsEmaContainer;
+    'dotcms-ema-contentlet': DotcmsEmaContentlet;
   }
 }
 
@@ -60,6 +88,8 @@ declare module "@stencil/core" {
     interface IntrinsicElements {
       'dotcms-container': LocalJSX.DotcmsContainer & JSXBase.HTMLAttributes<HTMLDotcmsContainerElement>;
       'dotcms-contentlet': LocalJSX.DotcmsContentlet & JSXBase.HTMLAttributes<HTMLDotcmsContentletElement>;
+      'dotcms-ema-container': LocalJSX.DotcmsEmaContainer & JSXBase.HTMLAttributes<HTMLDotcmsEmaContainerElement>;
+      'dotcms-ema-contentlet': LocalJSX.DotcmsEmaContentlet & JSXBase.HTMLAttributes<HTMLDotcmsEmaContentletElement>;
     }
   }
 }

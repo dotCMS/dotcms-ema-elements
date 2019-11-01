@@ -1,10 +1,10 @@
 import { Component, h, Prop, Host } from '@stencil/core';
 
 @Component({
-  tag: 'dotcms-container',
+  tag: 'dotcms-ema-container',
   shadow: true
 })
-export class DotcmsContainer {
+export class DotcmsEmaContainer {
   @Prop() container = {
     acceptTypes: '',
     inode: '',
