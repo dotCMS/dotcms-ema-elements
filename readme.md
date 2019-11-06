@@ -9,8 +9,8 @@ In this repo we provide two Web Components that will help you to pass those attr
 We have two:
 
 ```html
-<dotcms-ema-container container={}>
-  <dotcms-ema-contentlet contenlet={container={}}>
+<dotcms-ema-container container="{}">
+  <dotcms-ema-contentlet contenlet="{}">
     <!--HERE GOES YOUR CONTENTLET-->
   </dotcms-ema-contentlet>
 </dotcms-ema-container>

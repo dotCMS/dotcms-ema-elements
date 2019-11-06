@@ -10,6 +10,10 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/dotcms-ema-elements/dotcms-ema-elements.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dotCMS/dotcms-ema-elements"
+  },
   "files": [
     "dist/",
     "loader/"
